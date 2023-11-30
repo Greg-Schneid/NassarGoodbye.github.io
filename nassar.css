@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+body{
+    background-color: #dadada;
+}
+
+header{
+    background-color: black;
+    padding:20px;
+    text-align: center;
+    position: fixed; 
+    width: 100%;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+}
+
+header h1{
+    color: white;
+    display: inline-block;
+    position: static;
+    font-size: 1em;
+}
+
+
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    max-width: 100%;
+}
+
+.banner .welcome{
+    position: absolute;
+    left: 0;
+    top:30%;
+    background-color: black;
+    color: white;
+    padding: 60px 30px;
+}
+
+
+
+.banner h2{
+    font-size: 30px;
+}
+
+.banner h2 span{
+    font-size:90px; /*Takes it Original size and Multiplies by 1.2*/
+}
+
+
+main{
+    max-width:100%;
+    width: 1200px;
+    margin: 20px auto; /*equal distribution on left and right because of auto*/
+    padding: 20px 40px;
+    box-sizing: border-box; /*Encorperates Padding into total width*/
+    background-color: #F4F4F4;
+}
+
+article h2{
+    color: #F63232;
+    font-size: 48px;
+    text-align: center;
+}
+
+article p{
+    line-height: 2em;
+
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.messages{
+    padding: 20px auto;
+    margin-top: 20px;
+}
+
+
+p::selection{
+    background-color: #F63232;
+    color: white;
+}
+
+a{
+    color: gold;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+/* Responsive styles*/
+@media screen and (max-width: 1200px) {
+    .banner .welcome h2{
+        font-size: 60px;
+    }
+    nav li{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .banner .welcome{
+        padding: 40px 20px;
+    }
+
+    .banner .welcome h2{
+        font-size: 40px;
+    }
+    .banner .welcome h2 span{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .banner .welcome{
+        display: none;
+    }
+
+    img {
+    display: none;
+    }
+
+    header h1{
+        position: static;
+        z-index: 0;
+    }
+    main{
+        padding-top: 70px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+nav li{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.banner .img{
+    display: none;
+}
+}
